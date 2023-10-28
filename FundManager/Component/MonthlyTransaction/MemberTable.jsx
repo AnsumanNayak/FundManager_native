@@ -313,12 +313,12 @@ const MemberTable = ({ data, filteredData, onUpdateData, onUpdateCurrentPage, pa
             <TextInput
               mode="outlined"
               label="Loan Returned"
-              keyboardType="numeric"
+              keyboardType="number-pad"
             />
             <TextInput
               mode="outlined"
               label="Loan Taken"
-              keyboardType="numeric"
+              keyboardType="number-pad"
             />
             <Text style={{ color: "rgb(0, 103, 131)",marginTop:"5%" }}>The remaining total amount of loan is 
               <Text variant="bodyLarge" style={{fontWeight:"bold",color: "rgb(0, 103, 131)"}}>{selectedItem
@@ -386,7 +386,7 @@ const MemberTable = ({ data, filteredData, onUpdateData, onUpdateCurrentPage, pa
 const styles = StyleSheet.create({
   columnHeader: {
     fontWeight: "bold",
-    fontSize: 15,
+    fontSize: 14,
   },
   coolGray: {
     backgroundColor: "#F2F2F2",

@@ -5,6 +5,7 @@ import Member from './Component/Member/Member';
 import Home from './Component/Home/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import AddMember from './Component/Member/AddMember';
 
 const theme = {
   ...DefaultTheme,
@@ -28,6 +29,10 @@ export default function App() {
           <Stack.Screen 
             name="Member"
             component={Member} 
+            options={{ headerShown: false }}/>
+          <Stack.Screen 
+            name="AddMember"
+            component={AddMember} 
             options={{ headerShown: false }}/>
         </Stack.Navigator>
       </NavigationContainer>
