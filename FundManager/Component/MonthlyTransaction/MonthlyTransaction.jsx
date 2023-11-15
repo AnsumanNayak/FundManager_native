@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import {View} from 'react-native';
 import AppTopBar from './AppTopBar';
 import SearchBar from './SearchBar';
 import MemberTable from './MemberTable';
 import jsonData from './MonthlyTransactionData.json'; 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 8;
 export default function MonthlyTransaction({navigation}) {
 
     const [filterName, setFilterName] = useState('');
@@ -31,11 +32,11 @@ export default function MonthlyTransaction({navigation}) {
       setCurrentPage(updatedPageNo); // Update the data in the parent component
     };
     return (
-        <>
+        <View>
           <AppTopBar navigation={navigation}/>
           <SearchBar onSearch={handleSearch}/>
           <MemberTable data={data} filteredData={filteredData} onUpdateData={updateData} onUpdateCurrentPage={updateCurrentPage} pageNum={currentPage}/>
-        </>
+        </View>
 
     
     );

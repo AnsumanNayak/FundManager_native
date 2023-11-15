@@ -30,11 +30,11 @@ export default function AppTopBar({ navigation }) {
 
   const closeMenu = () => setMenuVisible(false);
 
-  const _goBack = () => navigation.navigate("Home");
+  // const _goBack = () => navigation.navigate("Home");
 
   return (
-    <Appbar.Header mode={"center-aligned"}>
-      <Appbar.BackAction onPress={_goBack} />
+    <Appbar.Header mode="small" style={{backgroundColor: "white"}}>
+      {/* <Appbar.BackAction onPress={_goBack} /> */}
       <Appbar.Content title="Monthly Transaction" />
       <Menu
         visible={menuVisible}

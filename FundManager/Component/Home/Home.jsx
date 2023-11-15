@@ -3,9 +3,7 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 import {
   Text,
   Avatar,
-  Card,
-  TouchableRipple,
-  Menu,
+  Card
 } from "react-native-paper";
 import * as React from "react";
 
@@ -43,7 +41,7 @@ export default function Home({ navigation }) {
               >
                 <Card style={styles.card} mode="contained">
                   <Card.Content>
-                    <Avatar.Icon size={130} icon="transfer-up" />
+                    <Avatar.Icon size={120} icon="transfer-up" />
                     <Text variant="labelLarge" style={styles.cardLabel}>
                       Manage Transaction
                     </Text>
@@ -56,7 +54,7 @@ export default function Home({ navigation }) {
               <TouchableOpacity onPress={() => navigation.navigate("Member")}>
                 <Card style={styles.card} mode="contained">
                   <Card.Content>
-                    <Avatar.Icon size={130} icon="account-group" />
+                    <Avatar.Icon size={120} icon="account-group" />
                     {/* <Text variant="labelLarge">Manage Member</Text> */}
                     <Text variant="labelLarge" style={styles.cardLabel}>
                       Manage Member
@@ -68,26 +66,30 @@ export default function Home({ navigation }) {
           </View>
           <View style={styles.container}>
             <View style={styles.cardContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate("Fund")}>
               <Card style={styles.card} mode="contained">
                 <Card.Content>
-                  <Avatar.Icon size={130} icon="account-cash" />
+                  <Avatar.Icon size={120} icon="account-cash" />
                   <Text variant="labelLarge" style={styles.cardLabel}>
                     Manage Fund
                   </Text>
                 </Card.Content>
               </Card>
+              </TouchableOpacity>
             </View>
 
             <View style={styles.cardContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
               <Card style={styles.card} mode="contained">
                 <Card.Content>
-                  <Avatar.Icon size={130} icon="account-cog" />
+                  <Avatar.Icon size={120} icon="account-cog" />
                   {/* <Text variant="labelLarge">Manage Member</Text> */}
                   <Text variant="labelLarge" style={styles.cardLabel}>
                     Manage Profile
                   </Text>
                 </Card.Content>
               </Card>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -114,7 +116,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     flex: 1,
-    margin: 3,
+    margin: 8,
     width: "100%",
   },
   card: {

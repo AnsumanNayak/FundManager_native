@@ -17,7 +17,7 @@ import {
 } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 8;
 const DIALOG_MSG_FOR_INSTALLMENT =
   "has paid you monthly installment for this month?";
 const DIALOG_MSG_FOR_INTREST = "has paid you intrest for this month?";
@@ -142,7 +142,7 @@ const MemberTable = ({ data, filteredData, onUpdateData, onUpdateCurrentPage, pa
     setModalVisible(false);
   };
   return (
-    <View style={{backgroundColor:"white"}}>
+    <View style={{backgroundColor:"white", height: "100%"}}>
       <DataTable>
         {/* Header */}
         <DataTable.Header style={styles.coolGray}>
@@ -239,8 +239,8 @@ const MemberTable = ({ data, filteredData, onUpdateData, onUpdateCurrentPage, pa
       <Portal>
         <Modal
           visible={isModalVisible}
-          transparent
-          animationType="slide"
+          transparent = {true}
+          animationType="fade"
           onDismiss={hideModal}
         >
           <View
@@ -320,8 +320,8 @@ const MemberTable = ({ data, filteredData, onUpdateData, onUpdateCurrentPage, pa
               label="Loan Taken"
               keyboardType="number-pad"
             />
-            <Text style={{ color: "rgb(0, 103, 131)",marginTop:"5%" }}>The remaining total amount of loan is 
-              <Text variant="bodyLarge" style={{fontWeight:"bold",color: "rgb(0, 103, 131)"}}>{selectedItem
+            <Text style={{ color: "rgb(0, 95, 175)",marginTop:"5%" }}>The remaining total amount of loan is 
+              <Text variant="bodyLarge" style={{fontWeight:"bold",color: "rgb(0, 95, 175)"}}>{selectedItem
                 ? "" +
                   " "+selectedItem.loanAmount
                 : ""}</Text>
@@ -349,15 +349,15 @@ const MemberTable = ({ data, filteredData, onUpdateData, onUpdateCurrentPage, pa
       <View style={styles.paginationContainer}>
         <Icon
           name="chevron-double-left"
-          size={30}
-          color={"rgb(0, 103, 131)"}
+          size={35}
+          color={"rgb(0, 95, 175)"}
           disabled={isFirstPage}
           onPress={() => {setCurrentPage(1);onUpdateCurrentPage(1)}}
         />
         <Icon
           name="chevron-left"
-          size={30}
-          color={"rgb(0, 103, 131)"}
+          size={35}
+          color={"rgb(0, 95, 175)"}
           disabled={isFirstPage}
           onPress={() => {setCurrentPage(currentPage - 1);onUpdateCurrentPage(currentPage-1)}}
         />
@@ -366,15 +366,15 @@ const MemberTable = ({ data, filteredData, onUpdateData, onUpdateCurrentPage, pa
         </Text>
         <Icon
           name="chevron-right"
-          size={30}
-          color={"rgb(0, 103, 131)"}
+          size={35}
+          color={"rgb(0, 95, 175)"}
           disabled={isLastPage}
           onPress={() => {setCurrentPage(currentPage + 1);onUpdateCurrentPage(currentPage+1)}}
         />
         <Icon
           name="chevron-double-right"
-          size={30}
-          color={"rgb(0, 103, 131)"}
+          size={35}
+          color={"rgb(0, 95, 175)"}
           disabled={isLastPage}
           onPress={() => {setCurrentPage(getTotalPages());onUpdateCurrentPage(getTotalPages())}}
         />
@@ -414,7 +414,7 @@ const styles = StyleSheet.create({
     right: 5,
   },
   avatarImage: {
-    shadowColor: "rgb(0, 103, 131)",
+    shadowColor: "rgb(0, 95, 175)",
     shadowOffset: {
       width: 0,
       height: 4,

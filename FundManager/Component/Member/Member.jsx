@@ -10,7 +10,7 @@ const Member = ({ navigation }) => {
   const [data, setData] = useState(jsonData);
 
 
-  const _goBack = () => navigation.navigate("Home");
+  // const _goBack = () => navigation.navigate("Home");
   const handleSearch = (text) => {
     setFilterName(text); // Update the filterName state
   };
@@ -34,8 +34,8 @@ const Member = ({ navigation }) => {
   );
   return (
     <View style={styles.container}>
-      <Appbar.Header>
-        <Appbar.BackAction onPress={_goBack} />
+      <Appbar.Header style={{backgroundColor: "white"}}>
+        {/* <Appbar.BackAction onPress={_goBack} /> */}
         <Appbar.Content title="Members details" />
       </Appbar.Header>
       <SearchBar onSearch={handleSearch} />

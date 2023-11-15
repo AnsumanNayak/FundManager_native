@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Alpha",
+        "period": "24",
+        "beginDt": "07",
+        "totalMembers": 100,
+        "intrest": 12,
+        "totalLoan": 200000,
+        "totalIntrest":18490,
+        "totalInstallments": 700000,
+        "currentMonth": 7,
+        "monthlyInstallment": 1000
+    },
+    {
+        "name": "Ganma",
+        "period": "12",
+        "beginDt": "07",
+        "totalMembers": 500,
+        "intrest": 12,
+        "totalLoan": 200000,
+        "totalIntrest":18490,
+        "totalInstallments": 700000,
+        "currentMonth": 7,
+        "monthlyInstallment": 1000
+    },
+    {
+        "name": "Bugto",
+        "period": "24",
+        "beginDt": "07",
+        "totalMembers": 50,
+        "intrest": 12,
+        "totalLoan": 200000,
+        "totalIntrest":18490,
+        "totalInstallments": 700000,
+        "currentMonth": 7,
+        "monthlyInstallment": 1000
+    },
+    {
+        "name": "Ryewa",
+        "period": "24",
+        "beginDt": "07",
+        "totalMembers": 120,
+        "intrest": 12,
+        "totalLoan": 200000,
+        "totalIntrest":18490,
+        "totalInstallments": 700000,
+        "currentMonth": 7,
+        "monthlyInstallment": 1000
+    }
+]
